@@ -32,8 +32,20 @@ const EditingState = (props: EditingStateProps) => {
           });
         }}
         onEnter={() => {
-          onEdit(sharedStruct.todoItemStruct);
-          setState('created-edited');
+          const preparedTodoListStruct = {
+            ...sharedStruct.todoItemStruct,
+            value: sharedStruct.todoItemStruct.value.trim(),
+          };
+
+          setSharedStruct({
+            ...sharedStruct,
+            todoItemStruct: preparedTodoListStruct,
+          });
+
+          if (preparedTodoListStruct.value.trim()) {
+            onEdit(sharedStruct.todoItemStruct);
+            setState('created-edited');
+          }
         }}
       />
       <StateUI.Buttons>
