@@ -4,9 +4,7 @@ type Options = {
   port: number;
 };
 
-export default function buildDevServer(
-  options: Options
-): DevServerConfiguration {
+export default function buildDevServer(options: Options): DevServerConfiguration {
   return {
     port: options.port,
     open: true,

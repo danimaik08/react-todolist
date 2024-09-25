@@ -10,9 +10,7 @@ type Options = {
   html: string;
 };
 
-export default function buildPlugins(
-  options: Options
-): webpack.Configuration['plugins'] {
+export default function buildPlugins(options: Options): webpack.Configuration['plugins'] {
   const isDev = options.mode === 'development';
 
   const useBundleAnalyzer = Helper.calculateUseBundleAnalyzerFlag();

@@ -4,9 +4,7 @@ type Options = {
   src: string;
 };
 
-export default function buildResolve(
-  options: Options
-): webpack.Configuration['resolve'] {
+export default function buildResolve(options: Options): webpack.Configuration['resolve'] {
   return {
     extensions: ['.ts', '.tsx', '.js'],
     alias: {

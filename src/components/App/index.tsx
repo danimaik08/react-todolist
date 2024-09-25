@@ -1,38 +1,32 @@
 import { useState } from 'react';
-import { Link, Outlet } from 'react-router-dom';
+import TodoItem from '../TodoItem';
+import * as UI from './styles';
+import TestIds from './testIds';
+import useTodoList from './useTodoList';
 
 export default function App() {
-  const [count, setCount] = useState(0);
+  const { elements, create, edit, remove } = useTodoList();
 
   return (
-    <div data-testid="App">
-      <div>
-        <div>
-          <Link to="/about">about</Link>
-        </div>
-        <div>
-          <Link to="/shop">shop</Link>
-        </div>
-      </div>
-      <h1 style={{ color: '#00f' }}>React</h1>
-      <div style={{ display: 'flex', gap: 8 }}>
-        <div>Counter: {count}</div>
-        <button
-          onClick={() => {
-            setCount((prev) => prev + 1);
-          }}
-        >
-          +
-        </button>
-        <button
-          onClick={() => {
-            setCount((prev) => prev - 1);
-          }}
-        >
-          -
-        </button>
-      </div>
-      <Outlet />
-    </div>
+    <UI.Wrapper data-testid={TestIds.app_is_exist}>
+      <UI.Button data-testid={TestIds.button_add} onClick={create}>
+        + Добавить элемент
+      </UI.Button>
+      <UI.TodoList data-testid={TestIds.todo_list}>
+        <UI.TodosHeader>Todo List:</UI.TodosHeader>
+        {elements.map((todoStruct) => {
+          return (
+            <TodoItem
+              key={todoStruct.id}
+              struct={todoStruct}
+              onCreate={edit}
+              onEdit={edit}
+              onRemove={remove}
+              onCancelCreate={remove}
+            />
+          );
+        })}
+      </UI.TodoList>
+    </UI.Wrapper>
   );
 }

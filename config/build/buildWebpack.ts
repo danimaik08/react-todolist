@@ -1,6 +1,5 @@
 import webpack from 'webpack';
 import 'webpack-dev-server';
-import path from 'path';
 import dotenv from 'dotenv';
 
 import buildLoaders from './buildLoaders';
