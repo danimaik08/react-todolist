@@ -1,5 +1,10 @@
 # react-todolist
 
+## Как запустить в первый раз
+
+- нужно установить node.js и npm
+- в корне проекта выполнить `npm install`, затем `npm start`
+
 ## Команды
 
 1. Запуск на localhost: `npm start`
