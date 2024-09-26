@@ -15,11 +15,12 @@ const RemovingState = (props: RemovingStateProps) => {
   return (
     <>
       <UI.Overlay />
-      <UI.ModalWrapper>
+      <UI.ModalWrapper className="removing_modal">
         <UI.Modal>
           <UI.ModalText>Вы уверены, что хотите удалить элемент?</UI.ModalText>
           <UI.ModalButtons>
             <UI.ModalButton
+              className="modal_yes"
               onClick={() => {
                 onRemove(sharedStruct.todoItemStruct.id);
               }}
@@ -27,6 +28,7 @@ const RemovingState = (props: RemovingStateProps) => {
               Да
             </UI.ModalButton>
             <UI.ModalButton
+              className="modal_no"
               onClick={() => {
                 setState('created-edited');
               }}

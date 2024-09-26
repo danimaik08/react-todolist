@@ -3,10 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.tsx",
+  "homepage": "https://danimaik08.github.io/react-todolist",
   "scripts": {
     "start": "webpack serve --env port=3000",
     "build:dev": "webpack --env mode=development",
     "build:prod": "webpack --env mode=production",
+    "predeploy": "npm run build:prod",
+    "deploy": "gh-pages -d dist",
     "test": "jest --no-cache --preset=ts-jest --testEnvironment=jsdom"
   },
   "keywords": [],
@@ -42,7 +45,8 @@
     "typescript": "5.5.4",
     "webpack-bundle-analyzer": "4.10.2",
     "webpack-cli": "5.1.4",
-    "webpack-dev-server": "5.0.4"
+    "webpack-dev-server": "5.0.4",
+    "gh-pages": "6.1.0"
   },
   "dependencies": {
     "react": "18.3.1",
