@@ -3,7 +3,7 @@ import '~/assets/fonts/stylesheet.css';
 import { createRoot } from 'react-dom/client';
 import React from 'react';
 
-import RootComponent from './RootComponent';
+import RootComponent from './components/App';
 
 const root = document.getElementById('root');
 
