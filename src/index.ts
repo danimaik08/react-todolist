@@ -8,7 +8,7 @@ import RootComponent from './RootComponent';
 const root = document.getElementById('root');
 
 if (!root) {
-  throw new Error('root not found');
+  throw new Error('div with id="root" not found');
 }
 
 const container = createRoot(root);
