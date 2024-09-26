@@ -14,7 +14,7 @@ export default (env: Env): webpack.Configuration => {
     mode: env.mode ?? 'development',
     port: +(env.port ?? 3000),
     paths: {
-      entry: path.resolve(__dirname, 'src', 'index.tsx'),
+      entry: path.resolve(__dirname, 'src', 'index.ts'),
       output: path.resolve(__dirname, 'dist'),
       src: path.resolve(__dirname, 'src'),
       html: path.resolve(__dirname, 'public', 'index.html'),

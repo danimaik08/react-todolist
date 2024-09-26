@@ -1,6 +1,7 @@
 import '~/index.css';
 import '~/assets/fonts/stylesheet.css';
 import { createRoot } from 'react-dom/client';
+import React from 'react';
 
 import RootComponent from './RootComponent';
 
@@ -12,4 +13,4 @@ if (!root) {
 
 const container = createRoot(root);
 
-container.render(<RootComponent />);
+container.render(React.createElement(RootComponent));
