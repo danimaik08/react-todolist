@@ -1,5 +1,7 @@
 # react-todolist
 
+- production: https://danimaik08.github.io/react-todolist/
+
 ## Как запустить в первый раз
 
 - нужно установить node.js и npm
@@ -10,7 +12,7 @@
 1. Запуск на localhost: `npm start`
 2. build `npm run build:dev` or `npm run build:prod`
 3. jest `npm run test`
-4. Часть тестов в другом репозитории: https://github.com/danimaik08/selenium-tests-for-react-todolist (они тестируют по ссылке, находящейся в package.json "homepage")
+4. Часть тестов в другом репозитории: https://github.com/danimaik08/selenium-tests-for-react-todolist (они тестируют по [production](https://danimaik08.github.io/react-todolist/))
 
 ## BundleAnalyzer
 
