@@ -2,7 +2,7 @@
   "name": "react-todolist",
   "version": "1.0.0",
   "description": "",
-  "main": "index.tsx",
+  "main": "index.ts",
   "homepage": "https://danimaik08.github.io/react-todolist",
   "scripts": {
     "start": "webpack serve --env port=3000",
