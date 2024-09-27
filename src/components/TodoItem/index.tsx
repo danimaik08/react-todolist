@@ -47,7 +47,7 @@ const TodoItem = (props: TodoItemProps) => {
     }
   }
 
-  return <UI.Wrapper className={state + ' ' + 'todo_item'}>{stateElement}</UI.Wrapper>;
+  return <UI.Wrapper data-testid="todo_item">{stateElement}</UI.Wrapper>;
 };
 
 export default TodoItem;

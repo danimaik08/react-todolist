@@ -21,7 +21,7 @@ const EditingState = (props: EditingStateProps) => {
       }}
     >
       <Input
-        className="editing_input"
+        data-testid="editing_input"
         ref={ref}
         autoFocus
         value={sharedStruct.todoItemStruct.value}
@@ -51,7 +51,7 @@ const EditingState = (props: EditingStateProps) => {
       />
       <StateUI.Buttons>
         <StateUI.Button
-          className="button_cancel_editing"
+          data-testid="button_cancel_editing"
           onClick={() => {
             setState('created-edited');
           }}

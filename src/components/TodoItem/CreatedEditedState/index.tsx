@@ -13,10 +13,10 @@ const CreatedEditedState = (props: CreatedEditedStateProps) => {
 
   return (
     <StateUI.Wrapper>
-      <StateUI.Text className="text">{sharedStruct.todoItemStruct.value}</StateUI.Text>
+      <StateUI.Text data-testid="text">{sharedStruct.todoItemStruct.value}</StateUI.Text>
       <StateUI.Buttons>
         <StateUI.Button
-          className="button_edit"
+          data-testid="button_edit_todo_item"
           onClick={() => {
             setState('editing');
           }}
@@ -24,7 +24,7 @@ const CreatedEditedState = (props: CreatedEditedStateProps) => {
           <EditSvg />
         </StateUI.Button>
         <StateUI.Button
-          className="button_remove"
+          data-testid="button_remove_todo_item"
           onClick={() => {
             setState('removing');
           }}

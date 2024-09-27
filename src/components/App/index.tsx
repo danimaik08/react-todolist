@@ -9,7 +9,7 @@ export default function App() {
 
   return (
     <UI.Wrapper data-testid={TestIds.app_is_exist}>
-      <UI.Button data-testid={TestIds.button_add} className="button_add" onClick={create}>
+      <UI.Button data-testid={TestIds.button_add} onClick={create}>
         + Добавить элемент
       </UI.Button>
       <UI.TodoList data-testid={TestIds.todo_list}>

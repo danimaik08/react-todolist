@@ -21,7 +21,7 @@ const CreatingState = (props: CreatingStateProps) => {
       }}
     >
       <Input
-        className="creating_input"
+        data-testid="creating_input"
         autoFocus
         ref={ref}
         value={sharedStruct.todoItemStruct.value}
@@ -51,7 +51,7 @@ const CreatingState = (props: CreatingStateProps) => {
       />
       <StateUI.Buttons>
         <StateUI.Button
-          className="button_cancel_creating"
+          data-testid="button_cancel_creating"
           onClick={() => {
             onCancelCreate(sharedStruct.todoItemStruct.id);
           }}
