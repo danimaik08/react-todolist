@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import TodoItem from '../TodoItem';
 import * as UI from './styles';
 import TestIds from './testIds';
